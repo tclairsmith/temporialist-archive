@@ -14,13 +14,13 @@
     <a href="index.html">THE TEMPORIALIST ARCHIVE</a>
   </div>
 
-  <button id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+<button id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
 
-  <div class="nav-links" id="nav-menu">
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
-  </div>
+<div class="nav-links" id="nav-menu">
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
+</div>
 </nav>
 </header>
   <main class="homepage-layout">
@@ -76,6 +76,15 @@
     <div class="archive-grid" id="archiveGrid"></div>
   </section>
 </main>
+
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
 
 </body>
 <script>

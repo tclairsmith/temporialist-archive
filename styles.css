@@ -35,6 +35,8 @@ header {
   background: #f9f9f9;
   padding: 1rem 2rem;
   border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -55,6 +57,10 @@ nav {
   transform: translateX(-50%);
   font-size: 2rem;
   text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
 }
 
 /* LAYOUT */
