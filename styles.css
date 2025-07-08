@@ -331,4 +331,33 @@ aside h2 {
   background: #333;
 }
 
+/* === ARCHIVE GRID BASE STYLE === */
+.archive-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.archive-item {
+  flex: 0 1 calc(33.333% - 1rem);
+  box-sizing: border-box;
+  max-width: calc(33.333% - 1rem);
+}
+
+/* === TABLET: 2 columns === */
+@media (max-width: 1024px) {
+  .archive-item {
+    flex: 0 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+/* === MOBILE: 1 column === */
+@media (max-width: 768px) {
+  .archive-item {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+}
 
