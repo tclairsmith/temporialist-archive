@@ -331,7 +331,7 @@ aside h2 {
   background: #333;
 }
 
-/* === ARCHIVE GRID BASE STYLE === */
+/* === ARCHIVE GRID BASE STYLE (3-up) === */
 .archive-grid {
   display: flex;
   flex-wrap: wrap;
@@ -345,15 +345,15 @@ aside h2 {
   max-width: calc(33.333% - 1rem);
 }
 
-/* === TABLET: 2 columns === */
-@media (max-width: 1024px) {
+/* === TABLET: 2-up below 1300px === */
+@media (max-width: 1299px) {
   .archive-item {
     flex: 0 1 calc(50% - 1rem);
     max-width: calc(50% - 1rem);
   }
 }
 
-/* === MOBILE: 1 column === */
+/* === MOBILE: 1-up below 768px === */
 @media (max-width: 768px) {
   .archive-item {
     flex: 0 1 100%;
