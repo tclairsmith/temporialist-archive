@@ -26,3 +26,10 @@ card.innerHTML = `
     <p class="desc">${item.desc}</p>
   </a>
 `;
+
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});

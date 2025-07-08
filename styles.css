@@ -360,5 +360,34 @@ aside h2 {
     max-width: 100%;
   }
 }
+/* Hide hamburger button on large screens */
+#nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
+/* Hide nav menu by default on small screens */
+@media (max-width: 900px) {
+  #nav-toggle {
+    display: block;
+  }
+
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #nav-menu.active {
+    display: flex;
+  }
+
+  /* Adjust nav-title as needed on small screens */
+  .nav-title {
+    margin-top: 1rem;
+  }
+}
 
