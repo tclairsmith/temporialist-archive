@@ -1,131 +1,11 @@
 [
   {
-    "id": "00001",
-    "title": "Back In the Valley Annotated Page",
-    "date": "2025-07-01",
-    "desc": "Gospel fragment from 'Back in the Valley,' possibly redacted by the Beloved.",
-    "link": "/archive/item_00001.html",
-    "image": "/Images/item_00001.jpg"
-  },
-  {
-    "id": "00002",
-    "title": "Daugerotype of TP Eschewing Acolyte",
-    "date": "2025-07-02",
-    "desc": "Baker has submitted this daugerotype as a relic for authentication by the Beloved.",
-    "link": "/archive/item_00002.html",
-    "image": "/Images/item_00002.jpg"
-  },
-  {
-    "id": "00003",
-    "title": "Placeholder Title 3",
-    "date": "2025-07-03",
-    "desc": "Description placeholder for archive item 00003.",
-    "link": "/archive/item_00003.html",
-    "image": "/Images/item_00003.jpg"
-  },
-  {
-    "id": "00004",
-    "title": "Placeholder Title 4",
-    "date": "2025-07-04",
-    "desc": "Description placeholder for archive item 00004.",
-    "link": "/archive/item_00004.html",
-    "image": "/Images/item_00004.jpg"
-  },
-  {
-    "id": "00005",
-    "title": "Placeholder Title 5",
-    "date": "2025-07-05",
-    "desc": "Description placeholder for archive item 00005.",
-    "link": "/archive/item_00005.html",
-    "image": "/Images/item_00005.jpg"
-  },
-  {
-    "id": "00006",
-    "title": "Placeholder Title 6",
-    "date": "2025-07-06",
-    "desc": "Description placeholder for archive item 00006.",
-    "link": "/archive/item_00006.html",
-    "image": "/Images/item_00006.jpg"
-  },
-  {
-    "id": "00007",
-    "title": "Placeholder Title 7",
-    "date": "2025-07-07",
-    "desc": "Description placeholder for archive item 00007.",
-    "link": "/archive/item_00007.html",
-    "image": "/Images/item_00007.jpg"
-  },
-  {
-    "id": "00008",
-    "title": "Placeholder Title 8",
-    "date": "2025-07-08",
-    "desc": "Description placeholder for archive item 00008.",
-    "link": "/archive/item_00008.html",
-    "image": "/Images/item_00008.jpg"
-  },
-  {
-    "id": "00009",
-    "title": "Placeholder Title 9",
-    "date": "2025-07-09",
-    "desc": "Description placeholder for archive item 00009.",
-    "link": "/archive/item_00009.html",
-    "image": "/Images/item_00009.jpg"
-  },
-  {
-    "id": "00010",
-    "title": "Placeholder Title 10",
-    "date": "2025-07-10",
-    "desc": "Description placeholder for archive item 00010.",
-    "link": "/archive/item_00010.html",
-    "image": "/Images/item_00010.jpg"
-  },
-  {
-    "id": "00011",
-    "title": "Placeholder Title 11",
-    "date": "2025-07-11",
-    "desc": "Description placeholder for archive item 00011.",
-    "link": "/archive/item_00011.html",
-    "image": "/Images/item_00011.jpg"
-  },
-  {
-    "id": "00012",
-    "title": "Placeholder Title 12",
-    "date": "2025-07-12",
-    "desc": "Description placeholder for archive item 00012.",
-    "link": "/archive/item_00012.html",
-    "image": "/Images/item_00012.jpg"
-  },
-  {
-    "id": "00013",
-    "title": "Placeholder Title 13",
-    "date": "2025-07-13",
-    "desc": "Description placeholder for archive item 00013.",
-    "link": "/archive/item_00013.html",
-    "image": "/Images/item_00013.jpg"
-  },
-  {
-    "id": "00014",
-    "title": "Placeholder Title 14",
-    "date": "2025-07-14",
-    "desc": "Description placeholder for archive item 00014.",
-    "link": "/archive/item_00014.html",
-    "image": "/Images/item_00014.jpg"
-  },
-  {
-    "id": "00015",
-    "title": "Placeholder Title 15",
-    "date": "2025-07-15",
-    "desc": "Description placeholder for archive item 00015.",
-    "link": "/archive/item_00015.html",
-    "image": "/Images/item_00015.jpg"
-  },
-  {
-    "id": "00016",
-    "title": "Placeholder Title 16",
-    "date": "2025-07-16",
-    "desc": "Description placeholder for archive item 00016.",
-    "link": "/archive/item_00016.html",
-    "image": "/Images/item_00016.jpg"
+    "id": "00018",
+    "title": "Placeholder Title 18",
+    "date": "2025-07-18",
+    "desc": "Description placeholder for archive item 00018.",
+    "link": "/archive/item_00018.html",
+    "image": "/images/thumbs/item_00018.jpg"
   },
   {
     "id": "00017",
@@ -133,14 +13,134 @@
     "date": "2025-07-17",
     "desc": "Description placeholder for archive item 00017.",
     "link": "/archive/item_00017.html",
-    "image": "/Images/item_00017.jpg"
+    "image": "/images/thumbs/item_00017.jpg"
   },
   {
-    "id": "00018",
-    "title": "Placeholder Title 18",
-    "date": "2025-07-18",
-    "desc": "Description placeholder for archive item 00018.",
-    "link": "/archive/item_00018.html",
-    "image": "/Images/item_00018.jpg"
+    "id": "00016",
+    "title": "Placeholder Title 16",
+    "date": "2025-07-16",
+    "desc": "Description placeholder for archive item 00016.",
+    "link": "/archive/item_00016.html",
+    "image": "/images/thumbs/item_00016.jpg"
+  },
+  {
+    "id": "00015",
+    "title": "Placeholder Title 15",
+    "date": "2025-07-15",
+    "desc": "Description placeholder for archive item 00015.",
+    "link": "/archive/item_00015.html",
+    "image": "/images/thumbs/item_00015.jpg"
+  },
+  {
+    "id": "00014",
+    "title": "Placeholder Title 14",
+    "date": "2025-07-14",
+    "desc": "Description placeholder for archive item 00014.",
+    "link": "/archive/item_00014.html",
+    "image": "/images/thumbs/item_00014.jpg"
+  },
+  {
+    "id": "00013",
+    "title": "Placeholder Title 13",
+    "date": "2025-07-13",
+    "desc": "Description placeholder for archive item 00013.",
+    "link": "/archive/item_00013.html",
+    "image": "/images/thumbs/item_00013.jpg"
+  },
+  {
+    "id": "00012",
+    "title": "Placeholder Title 12",
+    "date": "2025-07-12",
+    "desc": "Description placeholder for archive item 00012.",
+    "link": "/archive/item_00012.html",
+    "image": "/images/thumbs/item_00012.jpg"
+  },
+  {
+    "id": "00011",
+    "title": "Placeholder Title 11",
+    "date": "2025-07-11",
+    "desc": "Description placeholder for archive item 00011.",
+    "link": "/archive/item_00011.html",
+    "image": "/images/thumbs/item_00011.jpg"
+  },
+  {
+    "id": "00010",
+    "title": "Placeholder Title 10",
+    "date": "2025-07-10",
+    "desc": "Description placeholder for archive item 00010.",
+    "link": "/archive/item_00010.html",
+    "image": "/images/thumbs/item_00010.jpg"
+  },
+  {
+    "id": "00009",
+    "title": "Placeholder Title 9",
+    "date": "2025-07-09",
+    "desc": "Description placeholder for archive item 00009.",
+    "link": "/archive/item_00009.html",
+    "image": "/images/thumbs/item_00009.jpg"
+  },
+  {
+    "id": "00008",
+    "title": "Placeholder Title 8",
+    "date": "2025-07-08",
+    "desc": "Description placeholder for archive item 00008.",
+    "link": "/archive/item_00008.html",
+    "image": "/images/thumbs/item_00008.jpg"
+  },
+  {
+    "id": "00007",
+    "title": "Placeholder Title 7",
+    "date": "2025-07-07",
+    "desc": "Description placeholder for archive item 00007.",
+    "link": "/archive/item_00007.html",
+    "image": "/images/thumbs/item_00007.jpg"
+  },
+  {
+    "id": "00006",
+    "title": "Placeholder Title 6",
+    "date": "2025-07-06",
+    "desc": "Description placeholder for archive item 00006.",
+    "link": "/archive/item_00006.html",
+    "image": "/images/thumbs/item_00006.jpg"
+  },
+  {
+    "id": "00005",
+    "title": "Placeholder Title 5",
+    "date": "2025-07-05",
+    "desc": "Description placeholder for archive item 00005.",
+    "link": "/archive/item_00005.html",
+    "image": "/images/thumbs/item_00005.jpg"
+  },
+  {
+    "id": "00004",
+    "title": "Placeholder Title 4",
+    "date": "2025-07-04",
+    "desc": "Description placeholder for archive item 00004.",
+    "link": "/archive/item_00004.html",
+    "image": "/images/thumbs/item_00004.jpg"
+  },
+  {
+    "id": "00003",
+    "title": "Placeholder Title 3",
+    "date": "2025-07-03",
+    "desc": "Description placeholder for archive item 00003.",
+    "link": "/archive/item_00003.html",
+    "image": "/images/thumbs/item_00003.jpg"
+  },
+  {
+    "id": "00002",
+    "title": "Placeholder Title 2",
+    "date": "2025-07-02",
+    "desc": "Description placeholder for archive item 00002.",
+    "link": "/archive/item_00002.html",
+    "image": "/images/thumbs/item_00002.jpg"
+  },
+  {
+    "id": "00001",
+    "title": "Placeholder Title 1",
+    "date": "2025-07-01",
+    "desc": "Description placeholder for archive item 00001.",
+    "link": "/archive/item_00001.html",
+    "image": "/images/thumbs/item_00001.jpg"
   }
 ]
