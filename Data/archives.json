@@ -4,7 +4,7 @@
     "title": "Back In the Valley Annotated Page",
     "date": "2025-07-01",
     "desc": "Gospel fragment from 'Back in the Valley,' possibly redacted by the Beloved.",
-    "link": "https://thegreatbefore.neocities.org/archive/item_00001",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00001.html",
     "image": "https://thegreatbefore.neocities.org/Images/backinthevalley_annotated.jpg"
   },
   {
@@ -12,7 +12,63 @@
     "title": "Daugerotype of TP Eschewing Acolyte",
     "date": "2025-07-02",
     "desc": "Baker has submitted this daugerotype as a relic for authentication by the Beloved.",
-    "link": "https://thegreatbefore.neocities.org/archive/item_00002",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00002.html",
     "image": "https://thegreatbefore.neocities.org/Images/Future%20Past.jpg"
+  },
+  {
+    "id": "00003",
+    "title": "Placeholder Title 3",
+    "date": "2025-07-03",
+    "desc": "Description placeholder for archive item 00003.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00003.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_03.jpg"
+  },
+  {
+    "id": "00004",
+    "title": "Placeholder Title 4",
+    "date": "2025-07-04",
+    "desc": "Description placeholder for archive item 00004.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00004.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_04.jpg"
+  },
+  {
+    "id": "00005",
+    "title": "Placeholder Title 5",
+    "date": "2025-07-05",
+    "desc": "Description placeholder for archive item 00005.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00005.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_05.jpg"
+  },
+  {
+    "id": "00006",
+    "title": "Placeholder Title 6",
+    "date": "2025-07-06",
+    "desc": "Description placeholder for archive item 00006.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00006.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_06.jpg"
+  },
+  {
+    "id": "00007",
+    "title": "Placeholder Title 7",
+    "date": "2025-07-07",
+    "desc": "Description placeholder for archive item 00007.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00007.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_07.jpg"
+  },
+  {
+    "id": "00008",
+    "title": "Placeholder Title 8",
+    "date": "2025-07-08",
+    "desc": "Description placeholder for archive item 00008.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00008.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_08.jpg"
+  },
+  {
+    "id": "00009",
+    "title": "Placeholder Title 9",
+    "date": "2025-07-09",
+    "desc": "Description placeholder for archive item 00009.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00009.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_09.jpg"
   }
 ]
