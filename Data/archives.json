@@ -70,5 +70,77 @@
     "desc": "Description placeholder for archive item 00009.",
     "link": "https://thegreatbefore.neocities.org/archive/item_00009.html",
     "image": "https://thegreatbefore.neocities.org/Images/placeholder_09.jpg"
+  },
+  {
+    "id": "00010",
+    "title": "Placeholder Title 10",
+    "date": "2025-07-10",
+    "desc": "Description placeholder for archive item 00010.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00010.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_10.jpg"
+  },
+  {
+    "id": "00011",
+    "title": "Placeholder Title 11",
+    "date": "2025-07-11",
+    "desc": "Description placeholder for archive item 00011.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00011.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_11.jpg"
+  },
+  {
+    "id": "00012",
+    "title": "Placeholder Title 12",
+    "date": "2025-07-12",
+    "desc": "Description placeholder for archive item 00012.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00012.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_12.jpg"
+  },
+  {
+    "id": "00013",
+    "title": "Placeholder Title 13",
+    "date": "2025-07-13",
+    "desc": "Description placeholder for archive item 00013.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00013.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_13.jpg"
+  },
+  {
+    "id": "00014",
+    "title": "Placeholder Title 14",
+    "date": "2025-07-14",
+    "desc": "Description placeholder for archive item 00014.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00014.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_14.jpg"
+  },
+  {
+    "id": "00015",
+    "title": "Placeholder Title 15",
+    "date": "2025-07-15",
+    "desc": "Description placeholder for archive item 00015.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00015.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_15.jpg"
+  },
+  {
+    "id": "00016",
+    "title": "Placeholder Title 16",
+    "date": "2025-07-16",
+    "desc": "Description placeholder for archive item 00016.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00016.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_16.jpg"
+  },
+  {
+    "id": "00017",
+    "title": "Placeholder Title 17",
+    "date": "2025-07-17",
+    "desc": "Description placeholder for archive item 00017.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00017.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_17.jpg"
+  },
+  {
+    "id": "00018",
+    "title": "Placeholder Title 18",
+    "date": "2025-07-18",
+    "desc": "Description placeholder for archive item 00018.",
+    "link": "https://thegreatbefore.neocities.org/archive/item_00018.html",
+    "image": "https://thegreatbefore.neocities.org/Images/placeholder_18.jpg"
   }
 ]
