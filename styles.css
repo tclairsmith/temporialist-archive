@@ -360,7 +360,26 @@ aside h2 {
     max-width: 100%;
   }
 }
-/* Hide hamburger button on large screens */
+/* Desktop nav layout */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-title {
+  font-size: 2rem;
+  text-align: center;
+  flex: 1 1 100%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Hamburger styles */
 #nav-toggle {
   display: none;
   font-size: 2rem;
@@ -369,25 +388,37 @@ aside h2 {
   cursor: pointer;
 }
 
-/* Hide nav menu by default on small screens */
+/* Responsive */
 @media (max-width: 900px) {
   #nav-toggle {
     display: block;
   }
 
-  #nav-menu {
+  .nav-links {
     display: none;
     flex-direction: column;
-    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
   }
 
-  #nav-menu.active {
+  .nav-links.active {
     display: flex;
   }
 
-  /* Adjust nav-title as needed on small screens */
   .nav-title {
-    margin-top: 1rem;
+    order: -1;
+    margin-bottom: 1rem;
   }
 }
+⚙️ Step 3: Add the JavaScript
 
+Place this at the bottom of your <body>, just before </body>:
+
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
