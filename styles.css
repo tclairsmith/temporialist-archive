@@ -28,7 +28,6 @@ a:hover {
 }
 
 /* HEADER + NAVIGATION */
-/* HEADER + NAVIGATION */
 header {
   position: sticky;
   top: 0;
@@ -47,87 +46,36 @@ nav.main-nav {
   padding: 0 2rem;
 }
 
-/* Hamburger button styles */
-#nav-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  user-select: none;
-  color: black;
-  z-index: 1100; /* on top of overlay */
-}
-
-/* Nav left/right groups */
-.nav-left,
-.nav-right {
-  display: flex;
-  gap: 2rem;
-}
-
-/* Center the title absolutely on desktop */
-.nav-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  font-weight: 600;
-  white-space: nowrap;
-  pointer-events: auto;
-  z-index: 1200; /* above everything */
-}
-
-/* The mobile nav menu overlay (hidden by default) */
-.nav-menu {
-  position: fixed;
-  top: 60px; /* just below nav bar */
-  left: 0;
-  right: 0;
-  background: white;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem 0;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 1050;
-}
-
-/* Show overlay when active */
-.nav-menu.active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-/* Links inside overlay */
-.nav-menu a {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: black;
-  text-decoration: none;
-  user-select: none;
-}
-
-.nav-menu a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive rules at max-width 1099px */
+/* Show hamburger and hide nav links at max-width: 1099px */
 @media (max-width: 1099px) {
-  /* Stack each word vertically in site title */
+  #nav-toggle {
+    display: block;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  /* nav-menu display handled by JS via .active class */
+  #nav-menu {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #nav-menu.active {
+    display: flex;
+  }
+  
+  /* Title stacking */
   .nav-title a {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    white-space: normal; /* allow breaks */
-    font-size: 1.8rem; /* adjust size if needed */
+    white-space: normal;
+    font-size: 1.8rem;
     line-height: 1.2;
   }
 
@@ -136,27 +84,14 @@ nav.main-nav {
     width: 100%;
   }
 
-  /* Change nav-title container positioning */
   .nav-title {
-    position: static;    /* Remove absolute positioning */
-    transform: none;     /* Remove translate */
-    text-align: center;  /* Center text */
-    margin: 0.5rem auto; /* Vertical spacing */
-    padding: 0;          /* Reset padding */
-  }
-
-  /* Hide nav links on left and right */
-  .nav-left,
-  .nav-right {
-    display: none;
-  }
-
-  /* Show hamburger toggle */
-  #nav-toggle {
-    display: block;
+    position: static;
+    transform: none;
+    text-align: center;
+    margin: 0.5rem auto;
+    padding: 0;
   }
 }
-
 
 /* LAYOUT */
 main {
@@ -468,27 +403,5 @@ aside h2 {
   background: none;
   border: none;
   cursor: pointer;
-}
-
-/* Hide nav menu by default on small screens */
-@media (max-width: 900px) {
-  #nav-toggle {
-    display: block;
-  }
-
-  #nav-menu {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  #nav-menu.active {
-    display: flex;
-  }
-
-  /* Adjust nav-title as needed on small screens */
-  .nav-title {
-    margin-top: 1rem;
-  }
 }
 
