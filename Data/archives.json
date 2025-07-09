@@ -144,17 +144,3 @@
     "image": "/images/thumbs/item_00001.jpg"
   }
 ]
-  {
-    "id": "001",
-    "title": "Culpa Qui Official Deserunt",
-    "date": "2025-07-01",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...",
-    "link": "updates/001.html"
-  },
-  {
-    "id": "002",
-    "title": "Recovered Fragment from Site Zeta",
-    "date": "2025-07-03",
-    "desc": "Fragment shows unusual glyph patterns, previously undocumented in sector lexicons...",
-    "link": "updates/002.html"
-  }
