@@ -458,10 +458,8 @@ aside h2 {
     max-width: 100%;
   }
 }
-/* Hide hamburger button on large screens */
+/* Default (desktop): hide toggle */
 #nav-toggle {
-  order: -1;
-  margin-right: 1rem;
   display: none;
   font-size: 2rem;
   background: none;
@@ -469,5 +467,7 @@ aside h2 {
   cursor: pointer;
   user-select: none;
   color: black;
-  z-index: 1200;
+  z-index: 1400;
+  order: -1;
+  margin-right: 1rem;
 }
