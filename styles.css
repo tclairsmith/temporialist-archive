@@ -258,13 +258,6 @@ aside h2 {
   flex-direction: column;
 }
 
-.archive-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  width: 100%;
-}
-
 .archive-item {
   border: 1px solid #ccc;
   padding: 0.5rem;
@@ -421,6 +414,7 @@ aside h2 {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  width: 100%;
 }
 
 .archive-item {
@@ -438,6 +432,9 @@ aside h2 {
 }
 /* === MOBILE: 1-up at 1099px and below === */
 @media (max-width: 1099px) {
+   .archive-grid {
+    justify-content: flex-start;
+  }
   .archive-item {
     flex: 0 1 100%;
     max-width: 100%;
