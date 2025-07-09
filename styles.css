@@ -45,8 +45,8 @@ nav.main-nav {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  height: 100px;
-  padding: 0 2rem;
+  padding: 1rem 2rem; 
+  height: auto;
   z-index: 0;
 }
 
