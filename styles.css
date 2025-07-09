@@ -104,7 +104,7 @@ nav.main-nav {
 /* --- Responsive for small screens --- */
 @media (max-width: 1099px) {
   #nav-toggle {
-    display: block;
+    display: none;
   }
 
   .nav-left,
