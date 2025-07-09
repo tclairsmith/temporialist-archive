@@ -452,14 +452,12 @@ aside h2 {
     margin-top: 2rem;  /* optional spacing */
   }
 .archive-scroll-wrapper {
-  max-height: 600px;       /* adjust to roughly fit 9 cards */
+  max-height: 400px;       /* adjust to roughly fit 9 cards */
   overflow-y: auto;
   padding-right: 0.5rem;   /* scrollbar space */
   border: 1px solid #ccc;  /* optional: same style as sidebar */
   background: white;
 }
-
-/* Optional: scrollbar styling like sidebar */
 .archive-scroll-wrapper::-webkit-scrollbar {
   width: 6px;
 }
