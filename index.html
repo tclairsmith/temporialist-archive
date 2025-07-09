@@ -1,26 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THE TEMPORIALIST ARCHIVE</title>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Nav Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #f9f9f9;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav.main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      height: 60px;
+      padding: 0 2rem;
+      z-index: 0;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-title {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      font-weight: 600;
+      white-space: nowrap;
+      z-index: 1200;
+    }
+
+    .nav-title a {
+      color: black;
+      text-decoration: none;
+    }
+
+    #nav-toggle {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1400;
+    }
+
+    #nav-menu {
+      display: none;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      padding: 1.5rem;
+      z-index: 1500;
+    }
+
+    #nav-menu.active {
+      display: flex;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 1099px) {
+      #nav-toggle {
+        display: block;
+      }
+
+      .nav-left,
+      .nav-right {
+        display: none;
+      }
+
+      .nav-title {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 0.5rem auto;
+        padding: 0;
+        z-index: 1200;
+      }
+
+      .nav-title a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.8rem;
+        line-height: 1.2;
+      }
+
+      .nav-title a span {
+        display: block;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
+
 <header>
   <nav class="main-nav">
-    <button id="nav-toggle" aria-label="Toggle navigation">
-      &#9776;
-    </button>
+    <button id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
 
     <div class="nav-left">
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT</a>
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
     </div>
 
     <div class="nav-title">
-      <a href="index.html">
+      <a href="#">
         <span>THE</span>
         <span>TEMPORIALIST</span>
         <span>ARCHIVE</span>
@@ -28,99 +133,34 @@
     </div>
 
     <div class="nav-right">
-      <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
+      <a href="#">BECOME AN ARCHIVIST</a>
     </div>
 
-    <!-- Mobile overlay -->
-  <div id="nav-menu" class="nav-menu">
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
-  </div>
-  
+    <div id="nav-menu" class="nav-menu">
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">BECOME AN ARCHIVIST</a>
+    </div>
   </nav>
-
 </header>
 
-  <main class="homepage-layout">
-  <aside class="field-updates">
-      <h2>FIELD UPDATES</h2>
-      <div class="field-updates-scroll">
-        <div class="update">
-          <p class="date">01/01/2025</p>
-          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#">>> READ FULL UPDATE</a>
-        </div>
-        <div class="update">
-          <p class="date">01/01/2025</p>
-          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#">>> READ FULL UPDATE</a>
-        </div>
-        <div class="update">
-          <p class="date">01/01/2025</p>
-          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#">>> READ FULL UPDATE</a>
-        </div>
-        <div class="update">
-          <p class="date">01/01/2025</p>
-          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#">>> READ FULL UPDATE</a>
-        </div>
-        <div class="update">
-          <p class="date">01/01/2025</p>
-          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#">>> READ FULL UPDATE</a>
-        </div>
-        <div class="update">
-          <p class="date">01/01/2025</p>
-          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#">>> READ FULL UPDATE</a>
-        </div>
-        <div class="update">
-          <p class="date">01/01/2025</p>
-          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#">>> READ FULL UPDATE</a>
-        </div>
-      </div>
-    </aside>
-
-   <section class="archive-section">
-    <div class="archive-grid" id="archiveGrid"></div>
-  </section>
-</main>
-</body>
 <script>
-fetch('/data/archives.json')
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById('archiveGrid');
-    container.innerHTML = '';
-    data.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'archive-item';
-      card.innerHTML = `
-        <a href="${item.link}">
-          <div class="archive-image-wrapper">
-            <img src="${item.image}" alt="${item.title}" />
-          </div>
-          <p class="archive-id">ARCHIVE ITEM NO. ${item.id}</p>
-          <h3>${item.title}</h3>
-          <p class="archive-date">${item.date}</p>
-          <p class="desc">${item.desc}</p>
-        </a>
-      `;
-      container.appendChild(card);
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  navToggle.addEventListener('click', () => {
+    const isActive = navMenu.classList.toggle('active');
+    navToggle.innerHTML = isActive ? '&times;' : '&#9776;';
+  });
+
+  // Optional: Close menu when clicking a link
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      navToggle.innerHTML = '&#9776;';
     });
-  })
-  .catch(err => console.error('Failed to load archive data:', err));
+  });
 </script>
 
-
+</body>
 </html>
