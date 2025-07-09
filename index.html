@@ -130,7 +130,6 @@ fetch('/data/archives.json')
     navToggle.innerHTML = isActive ? '&times;' : '&#9776;';
   });
 
-  // Optional: close menu on link click
   navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('active');
