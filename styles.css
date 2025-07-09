@@ -474,5 +474,5 @@ aside h2 {
   cursor: pointer;
   user-select: none;
   color: black;
-  z-index: 1200; /* must be higher than nav and nav-menu */
+  z-index: 1200;
 }
