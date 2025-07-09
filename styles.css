@@ -432,9 +432,33 @@ aside h2 {
 }
 /* === MOBILE: 1-up at 1099px and below === */
 @media (max-width: 1099px) {
-   .archive-grid {
+  nav.main-nav {
+    flex-direction: column;
+    align-items: center;  /* center all items horizontally */
+  }
+
+  #nav-toggle {
+    margin-bottom: 0.75rem;  /* space below hamburger */
+    order: 0;                /* make sure it comes first */
+  }
+
+  .nav-title {
+    order: 1;                /* title below hamburger */
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Hide the other nav links on mobile as you already do */
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .archive-grid {
     justify-content: flex-start;
   }
+
   .archive-item {
     flex: 0 1 100%;
     max-width: 100%;
