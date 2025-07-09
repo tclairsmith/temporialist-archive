@@ -2,66 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>THE TEMPORIALIST ARCHIVE</title>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav class="main-nav" role="navigation" aria-label="Primary navigation">
-      <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
-        &#9776;
-      </button>
+<header>
+  <nav class="main-nav">
+    <button id="nav-toggle" aria-label="Toggle navigation">
+      &#9776;
+    </button>
 
-      <div class="nav-left">
-        <a href="index.html">HOME</a>
-        <a href="about.html">ABOUT</a>
-      </div>
-
-      <div class="nav-title">
-        <a href="index.html">
-          <span>THE</span>
-          <span>TEMPORIALIST</span>
-          <span>ARCHIVE</span>
-        </a>
-      </div>
-
-      <div class="nav-right">
-        <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
-      </div>
-    </nav>
-
-    <!-- Mobile menu overlay -->
-    <div id="nav-menu" class="nav-menu" role="menu" aria-hidden="true">
-      <a href="index.html" role="menuitem" tabindex="-1">HOME</a>
-      <a href="about.html" role="menuitem" tabindex="-1">ABOUT</a>
-      <a href="become-an-archivist.html" role="menuitem" tabindex="-1">BECOME AN ARCHIVIST</a>
+    <div class="nav-left">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
     </div>
-  </header>
+
+    <div class="nav-title">
+      <a href="index.html">
+        <span>THE</span>
+        <span>TEMPORIALIST</span>
+        <span>ARCHIVE</span>
+      </a>
+    </div>
+
+    <div class="nav-right">
+      <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div id="nav-menu" class="nav-menu">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
+  </div>
+</header>
 
   <main class="homepage-layout">
-    <aside class="field-updates">
+  <aside class="field-updates">
       <h2>FIELD UPDATES</h2>
       <div class="field-updates-scroll">
-        <!-- Your update entries here -->
-        <!-- Example entry -->
         <div class="update">
           <p class="date">01/01/2025</p>
           <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
-          <p class="desc">Lorem ipsum dolor sit amet...</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a href="#">>> READ FULL UPDATE</a>
         </div>
-        <!-- Repeat as needed -->
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
       </div>
     </aside>
 
-    <section class="archive-section">
-      <div class="archive-grid" id="archiveGrid"></div>
-    </section>
-  </main>
-
-  <script src="nav-toggle.js"></script>
-  <script src="load-archives.js"></script>
+   <section class="archive-section">
+    <div class="archive-grid" id="archiveGrid"></div>
+  </section>
+</main>
 </body>
+<script>
+fetch('/data/archives.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('archiveGrid');
+    container.innerHTML = '';
+    data.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'archive-item';
+      card.innerHTML = `
+        <a href="${item.link}">
+          <div class="archive-image-wrapper">
+            <img src="${item.image}" alt="${item.title}" />
+          </div>
+          <p class="archive-id">ARCHIVE ITEM NO. ${item.id}</p>
+          <h3>${item.title}</h3>
+          <p class="archive-date">${item.date}</p>
+          <p class="desc">${item.desc}</p>
+        </a>
+      `;
+      container.appendChild(card);
+    });
+  })
+  .catch(err => console.error('Failed to load archive data:', err));
+</script>
+
+
 </html>
