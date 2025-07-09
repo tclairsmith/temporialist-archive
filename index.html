@@ -1,4 +1,12 @@
-@ -10,26 +10,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE TEMPORIALIST ARCHIVE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 <body>
  <header>
   <nav>
@@ -22,26 +30,86 @@
   <a href="index.html">THE TEMPORIALIST ARCHIVE</a>
 </div>
   </nav>
-  <div class="nav-title">
-    <a href="index.html">THE TEMPORIALIST ARCHIVE</a>
-  </div>
-
-  <button id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-
-  <div class="nav-links" id="nav-menu">
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
-  </div>
-</nav>
 </header>
   <main class="homepage-layout">
   <aside class="field-updates">
-@ -84,6 +76,7 @@
+      <h2>FIELD UPDATES</h2>
+      <div class="field-updates-scroll">
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+        <div class="update">
+          <p class="date">01/01/2025</p>
+          <p class="title">CULPA QUI OFFICIAL DESERUNT</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">>> READ FULL UPDATE</a>
+        </div>
+      </div>
+    </aside>
+
+   <section class="archive-section">
     <div class="archive-grid" id="archiveGrid"></div>
   </section>
 </main>
-
 </body>
 <script>
 fetch('/data/archives.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('archiveGrid');
+    container.innerHTML = '';
+    data.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'archive-item';
+      card.innerHTML = `
+        <a href="${item.link}">
+          <div class="archive-image-wrapper">
+            <img src="${item.image}" alt="${item.title}" />
+          </div>
+          <p class="archive-id">ARCHIVE ITEM NO. ${item.id}</p>
+          <h3>${item.title}</h3>
+          <p class="archive-date">${item.date}</p>
+          <p class="desc">${item.desc}</p>
+        </a>
+      `;
+      container.appendChild(card);
+    });
+  })
+  .catch(err => console.error('Failed to load archive data:', err));
+</script>
+
+
+</html>
