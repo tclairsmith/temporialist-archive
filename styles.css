@@ -464,11 +464,14 @@ aside h2 {
   }
 }
 /* Hide hamburger button on large screens */
+}
 #nav-toggle {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
+  user-select: none;
+  color: black;
+  z-index: 1200; /* must be higher than nav and nav-menu */
 }
-
