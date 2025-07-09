@@ -419,7 +419,7 @@ aside h2 {
   background: #333;
 }
 
-/* === ARCHIVE GRID BASE STYLE (3-up above 1300px) === */
+/* === ARCHIVE GRID BASE STYLE (4-up above 1300px) === */
 .archive-grid {
   display: flex;
   flex-wrap: wrap;
@@ -429,7 +429,7 @@ aside h2 {
 }
 
 .archive-item {
-  flex: 0 1 calc(33.333% - 1rem);
+  flex: 0 1 calc(25% - 1rem);
   box-sizing: border-box;
   max-width: calc(33.333% - 1rem);
 }
