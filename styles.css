@@ -432,7 +432,7 @@ aside h2 {
 }
 /* === MOBILE: 1-up at 1099px and below === */
 .archive-scroll-wrapper {
-  max-height: 600px;       /* adjust to roughly fit 9 cards */
+  max-height: 70vh;      /* adjust to roughly fit 9 cards */
   overflow-y: auto;
   padding-right: 0.5rem;   /* scrollbar space */
   border: 1px solid #ccc;  /* optional: same style as sidebar */
