@@ -1,5 +1,4 @@
-// This JS loads the latest archive item from a metadata file or page.
-// For now, we simulate the metadata directly. Later, we’ll fetch from /archive/001.html.
+
 
 const latestCard = document.getElementById("latest-card");
 
@@ -32,4 +31,10 @@ const navMenu = document.getElementById('nav-menu');
 
 navToggle.addEventListener('click', () => {
   navMenu.classList.toggle('active');
+
+  if (navMenu.classList.contains('active')) {
+    navToggle.innerHTML = '&times;'; // × close icon
+  } else {
+    navToggle.innerHTML = '&#9776;'; // ☰ hamburger icon
+  }
 });

@@ -37,83 +37,106 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
-/* Make sure nav is flex container */
 nav.main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  height: 60px; /* matches your existing nav height */
-  padding: 0 2rem; /* same horizontal padding as header */
+  height: 60px;
+  padding: 0 2rem;
 }
 
-/* Left and right nav groups */
-.nav-left,
-.nav-right {
-  display: flex;
-  gap: 2rem;
-}
-
-/* Title absolutely centered */
-.nav-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  font-weight: 600;
-  white-space: nowrap; /* prevent wrapping */
-  pointer-events: none; /* so clicks pass through if needed */
-}
-
-/* Optional: if you want links inside nav-title clickable, remove pointer-events */
-
-/* Hide the hamburger on desktop as you have */
+/* Hamburger button styles */
 #nav-toggle {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
+  user-select: none;
+  color: black;
+  z-index: 1100; /* on top of overlay */
 }
 
-/* Mobile styles */
+/* Nav left/right groups */
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Center the title absolutely */
+.nav-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: auto;
+  z-index: 1200; /* above everything */
+}
+
+/* The mobile nav menu overlay (hidden by default) */
+.nav-menu {
+  position: fixed;
+  top: 60px; /* just below nav bar */
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1050;
+}
+
+/* Show overlay when active */
+.nav-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Links inside overlay */
+.nav-menu a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+  user-select: none;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive rules */
 @media (max-width: 900px) {
+  /* Show hamburger */
   #nav-toggle {
     display: block;
   }
 
-  #nav-menu {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  #nav-menu.active {
-    display: flex;
-  }
-
-  /* Stack nav title below menu on mobile */
-  .nav-title {
-    position: static;
-    transform: none;
-    margin-top: 1rem;
-    pointer-events: auto;
-    text-align: center;
-  }
-
-  nav.main-nav {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    height: auto;
-    padding: 1rem 2rem;
-  }
-
+  /* Hide left and right nav groups */
   .nav-left,
   .nav-right {
-    gap: 1rem;
+    display: none;
+  }
+
+  /* Keep nav-title centered and visible */
+  .nav-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
-
 
 /* LAYOUT */
 main {
