@@ -65,7 +65,7 @@ nav.main-nav {
   gap: 2rem;
 }
 
-/* Center the title absolutely */
+/* Center the title absolutely on desktop */
 .nav-title {
   position: absolute;
   left: 50%;
@@ -75,6 +75,34 @@ nav.main-nav {
   white-space: nowrap;
   pointer-events: auto;
   z-index: 1200; /* above everything */
+}
+
+/* Responsive adjustments at 1099px and below */
+@media (max-width: 1099px) {
+  /* Stack each word vertically */
+  .nav-title a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    white-space: normal; /* allow breaks */
+    font-size: 1.8rem; /* adjust size if needed */
+    line-height: 1.2;
+  }
+
+  .nav-title a span {
+    display: block;
+    width: 100%;
+  }
+
+  /* Change nav-title container positioning for better layout */
+  .nav-title {
+    position: static;    /* Remove absolute positioning */
+    transform: none;     /* Remove translate */
+    text-align: center;  /* Center text */
+    margin: 0.5rem auto; /* Vertical spacing */
+    padding: 0;          /* Reset padding if needed */
+  }
 }
 
 /* The mobile nav menu overlay (hidden by default) */
