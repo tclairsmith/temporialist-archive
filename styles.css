@@ -37,17 +37,23 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
+/* === NAVIGATION BASE === */
 nav.main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  z-index: 0;
   height: 60px;
   padding: 0 2rem;
+  z-index: 0;
 }
 
-/* === Site title centered absolutely on desktop === */
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
 .nav-title {
   position: absolute;
   left: 50%;
@@ -55,7 +61,6 @@ nav.main-nav {
   font-size: 2rem;
   font-weight: 600;
   white-space: nowrap;
-  pointer-events: auto;
   z-index: 1200;
 }
 
@@ -65,50 +70,39 @@ nav.main-nav {
   text-decoration: none;
 }
 
-/* === Nav link groups (desktop) === */
-.nav-left,
-.nav-right {
-  display: flex;
-  gap: 2rem;
-}
-
-/* --- Default styles (large screens) --- */
 #nav-toggle {
-  display: none; /* hide hamburger by default */
+  display: none;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
   user-select: none;
   color: black;
-  order: -1; /* show on far left when flexed */
+  z-index: 1400;
+  order: -1;
   margin-right: 1rem;
-  z-index: 1200;
 }
 
-.nav-left,
-.nav-right {
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  z-index: 1500;
+}
+
+#nav-menu.active {
   display: flex;
-  gap: 2rem;
 }
 
-.nav-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  font-weight: 600;
-  white-space: nowrap;
-  z-index: 1200;
-}
-
-/* --- Responsive for small screens --- */
+/* === MOBILE RESPONSIVE === */
 @media (max-width: 1099px) {
-  #nav-toggle {
-    display: block;
-    z-index: 1400;
-  }
-
   .nav-left,
   .nav-right {
     display: none;
@@ -135,24 +129,11 @@ nav.main-nav {
     width: 100%;
   }
 
-  #nav-menu {
-    display: none;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 1.5rem 0;
-    z-index: 1300;
-  }
-
-  #nav-menu.active {
-    display: flex;
+  #nav-toggle {
+    display: block;
   }
 }
+
 
 
 /* LAYOUT */
@@ -449,25 +430,4 @@ aside h2 {
     flex: 0 1 calc(50% - 1rem);
     max-width: calc(50% - 1rem);
   }
-}
-
-/* === MOBILE: 1-up at 1099px and below === */
-@media (max-width: 1099px) {
-  .archive-item {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
-}
-/* Default (desktop): hide toggle */
-#nav-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  user-select: none;
-  color: black;
-  z-index: 1400;
-  order: -1;
-  margin-right: 1rem;
 }
