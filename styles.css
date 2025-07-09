@@ -46,7 +46,21 @@ nav.main-nav {
   padding: 0 2rem;
 }
 
-/* === Site title centered absolutely on desktop === */
+/* Hamburger toggle button (hidden by default, on left when visible) */
+#nav-toggle {
+  order: -1;
+  margin-right: 1rem;
+  display: none; /* shown only on small screens */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  color: black;
+  z-index: 1200;
+}
+
+/* Site title centered absolutely on desktop */
 .nav-title {
   position: absolute;
   left: 50%;
@@ -64,54 +78,26 @@ nav.main-nav {
   text-decoration: none;
 }
 
-/* === Nav link groups (desktop) === */
+/* Nav link groups (desktop) */
 .nav-left,
 .nav-right {
   display: flex;
   gap: 2rem;
 }
 
-/* --- Default styles (large screens) --- */
-#nav-toggle {
-  display: none; /* hide hamburger by default */
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  user-select: none;
-  color: black;
-  order: -1; /* show on far left when flexed */
-  margin-right: 1rem;
-  z-index: 1200;
-}
-
-.nav-left,
-.nav-right {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  font-weight: 600;
-  white-space: nowrap;
-  z-index: 1200;
-}
-
-/* --- Responsive for small screens --- */
+/* === Responsive for small screens (mobile & tablet) === */
 @media (max-width: 1099px) {
   #nav-toggle {
-    display: block;
+    display: block; /* show hamburger */
   }
 
+  /* Hide nav links */
   .nav-left,
   .nav-right {
     display: none;
   }
 
+  /* Center and stack title */
   .nav-title {
     position: static;
     transform: none;
@@ -133,12 +119,13 @@ nav.main-nav {
     width: 100%;
   }
 
+  /* Mobile nav overlay menu */
   #nav-menu {
     display: none;
     flex-direction: column;
     gap: 1.5rem;
     position: fixed;
-    top: 60px;
+    top: 60px;  /* below nav */
     left: 0;
     right: 0;
     background: white;
@@ -152,8 +139,7 @@ nav.main-nav {
   }
 }
 
-
-/* LAYOUT */
+/* === LAYOUT === */
 main {
   display: flex;
   gap: 2rem;
@@ -170,6 +156,7 @@ aside {
   border: 1px solid #ccc;
   font-size: 0.95rem;
 }
+
 .archive-page {
   max-width: 800px;
   margin: 2rem auto;
@@ -216,7 +203,6 @@ aside {
   color: black;
   text-decoration: underline;
 }
-
 
 aside h2 {
   font-size: 1.2rem;
@@ -271,13 +257,17 @@ aside h2 {
 }
 
 .archive-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
   width: 100%;
 }
 
 .archive-item {
+  flex: 0 1 calc(33.333% - 1rem);
+  box-sizing: border-box;
+  max-width: calc(33.333% - 1rem);
   border: 1px solid #ccc;
   padding: 0.5rem;
   background: #fff;
@@ -297,39 +287,16 @@ aside h2 {
   font-size: 0.8rem;
 }
 
-.archive-metadata {
-  font-size: 0.9rem;
-  background: #f0f0f0;
-  padding: 1rem;
-  border-left: 3px solid #333;
-  margin-bottom: 2rem;
-}
-.archive-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.archive-image img {
-  display: block;
-  max-width: 100%;
-  max-height: 500px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border: 1px solid #ccc;
-}
 .archive-image-wrapper {
   width: 100%;
   height: 180px;
-  background: #e0e0e0; /* grey background */
+  background: #e0e0e0;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   margin-bottom: 0.5rem;
-  padding: 12px 0; /* Top and bottom padding */
+  padding: 12px 0;
   border-radius: 4px;
 }
 
@@ -338,7 +305,7 @@ aside h2 {
   max-width: 100%;
   object-fit: contain;
   display: block;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* new drop shadow on the image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .archive-id {
@@ -354,6 +321,7 @@ aside h2 {
   color: #888;
   margin: 0.2rem 0;
 }
+
 .about-section {
   max-width: 700px;
   margin: 3rem auto;
@@ -374,6 +342,7 @@ aside h2 {
 .about-section a {
   text-decoration: underline;
 }
+
 .become-archivist {
   max-width: 500px;
   margin: 4rem auto;
@@ -427,21 +396,7 @@ aside h2 {
   background: #333;
 }
 
-/* === ARCHIVE GRID BASE STYLE (3-up above 1300px) === */
-.archive-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.archive-item {
-  flex: 0 1 calc(33.333% - 1rem);
-  box-sizing: border-box;
-  max-width: calc(33.333% - 1rem);
-}
-
-/* === TABLET: 2-up between 1031px and 1100px === */
+/* === RESPONSIVE ARCHIVE GRID === */
 @media (max-width: 1299px) and (min-width: 1100px) {
   .archive-item {
     flex: 0 1 calc(50% - 1rem);
@@ -449,23 +404,9 @@ aside h2 {
   }
 }
 
-/* === MOBILE: 1-up at 1099px and below === */
 @media (max-width: 1099px) {
   .archive-item {
     flex: 0 1 100%;
     max-width: 100%;
   }
-}
-/* Hide hamburger button on large screens */
-#nav-toggle {
-  order: -1;
-  margin-right: 1rem;
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  user-select: none;
-  color: black;
-  z-index: 1200;
 }
