@@ -8,40 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header>
-  <nav class="main-nav">
-    <button id="nav-toggle" aria-label="Toggle navigation">
-      &#9776;
-    </button>
-
-    <div class="nav-left">
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-    </div>
-
-    <div class="nav-title">
-      <a href="index.html">
-        <span>THE</span>
-        <span>TEMPORIALIST</span>
-        <span>ARCHIVE</span>
-      </a>
-    </div>
-
-    <div class="nav-right">
-      <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
-    </div>
-
-    <!-- Mobile overlay -->
-  <div id="nav-menu" class="nav-menu">
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
-  </div>
-  
-  </nav>
-
-</header>
-
+<div id="nav-placeholder"></div>
   <main class="homepage-layout">
   <aside class="field-updates">
       <h2>FIELD UPDATES</h2>
@@ -90,12 +57,39 @@
         </div>
       </div>
     </aside>
-
    <section class="archive-section">
+    <div class="archive-scroll-wrapper">
     <div class="archive-grid" id="archiveGrid"></div>
+    </div>
   </section>
 </main>
-</body>
+<script>
+  fetch('/nav.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+
+      // Re-bind nav interactivity after injection
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+          const isActive = navMenu.classList.toggle('active');
+          navToggle.innerHTML = isActive ? '&times;' : '&#9776;';
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            navToggle.innerHTML = '&#9776;';
+          });
+        });
+      }
+    })
+    .catch(error => console.error('Failed to load nav:', error));
+</script>
+
 <script>
 fetch('/data/archives.json')
   .then(response => response.json())
@@ -138,5 +132,5 @@ fetch('/data/archives.json')
   });
 </script>
 
-
+</body>
 </html>

@@ -9,16 +9,7 @@
   <meta name="date" content="2025-07-07" />
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="nav-left">
-        <a href="/index.html">HOME</a>
-        <a href="/about.html">ABOUT</a>
-        <a href="/become-an-archivist.html">BECOME AN ARCHIVIST</a>
-      </div>
-      <div class="nav-title">THE TEMPORALIST ARCHIVE</div>
-    </nav>
-  </header>
+  <div id="nav-placeholder"></div>
 
   <main>
     <article class="archive-page">
@@ -41,5 +32,31 @@
       </p>
     </article>
   </main>
+  <script>
+  fetch('/nav.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+
+      // Re-bind nav interactivity after injection
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+          const isActive = navMenu.classList.toggle('active');
+          navToggle.innerHTML = isActive ? '&times;' : '&#9776;';
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            navToggle.innerHTML = '&#9776;';
+          });
+        });
+      }
+    })
+    .catch(error => console.error('Failed to load nav:', error));
+</script>
 </body>
 </html>
