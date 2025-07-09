@@ -144,7 +144,7 @@ nav.main-nav {
     background: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 1.5rem 0;
-    z-index: 1100;
+    z-index: 1300;
   }
 
   #nav-menu.active {
