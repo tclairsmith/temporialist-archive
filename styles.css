@@ -109,12 +109,17 @@ nav.main-nav {
   .nav-right {
     display: none;
   }
-
+  nav.main-nav {
+    flex-direction: column; /* stack nav elements vertically */
+    align-items: flex-start; /* align left but can be centered if you want */
+    padding: 2rem 2rem;
+  }
   .nav-title {
+    Width: 100%;
     position: static;
     transform: none;
     text-align: center;
-    margin: 0.5rem auto;
+    margin: 1rem 0;
     padding: 0;
   }
 
