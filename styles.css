@@ -437,6 +437,21 @@ aside h2 {
     align-items: center;  /* center all items horizontally */
   }
 
+   main {
+    flex-direction: column;  /* stack children vertically */
+  }
+
+  .archive-section {
+    order: 0;  /* first */
+    width: 100%;
+  }
+
+  aside.field-updates {
+    order: 1;  /* second, below archive */
+    width: 100%;
+    margin-top: 2rem;  /* optional spacing */
+  }
+
   #nav-toggle {
     margin-bottom: 0.75rem;  /* space below hamburger */
     order: 0;                /* make sure it comes first */
@@ -462,20 +477,5 @@ aside h2 {
   .archive-item {
     flex: 0 1 100%;
     max-width: 100%;
-  }
-}
-  main {
-    flex-direction: column;  /* stack children vertically */
-  }
-
-  .archive-section {
-    order: 0;  /* first */
-    width: 100%;
-  }
-
-  aside.field-updates {
-    order: 1;  /* second, below archive */
-    width: 100%;
-    margin-top: 2rem;  /* optional spacing */
   }
 }
