@@ -131,6 +131,32 @@ fetch('/data/archives.json')
     });
   });
 </script>
+<script>
+  fetch('/data/field-updates.json')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.querySelector('.field-updates-scroll');
+      container.innerHTML = ''; // clear any static placeholders
+
+      data.forEach(item => {
+        const updateDiv = document.createElement('div');
+        updateDiv.className = 'update';
+
+        updateDiv.innerHTML = `
+          <p class="date">${item.date}</p>
+          <p class="title">${item.title}</p>
+          <p class="desc">${item.desc}</p>
+          <a href="${item.link}">&gt;&gt; READ FULL UPDATE</a>
+        `;
+
+        container.appendChild(updateDiv);
+      });
+    })
+    .catch(err => {
+      console.error('Failed to load field updates:', err);
+    });
+</script>
+
 
 </body>
 </html>
