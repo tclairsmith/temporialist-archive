@@ -6,6 +6,63 @@
   <title>THE TEMPORIALIST ARCHIVE</title>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .nav-left {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-title {
+      flex: 1 1 100%;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .nav-title a {
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    @media (min-width: 768px) {
+      .nav-title {
+        flex: 1 1 auto;
+        order: -1;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      nav {
+        flex-wrap: nowrap;
+        align-items: flex-start;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .nav-title {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        left: 0;
+        padding: 2rem 0;
+      }
+
+      nav {
+        position: relative;
+        padding-top: 4rem;
+      }
+    }
+  </style>
 </head>
 <body>
  <header>
@@ -19,16 +76,16 @@
       <a href="index.html">THE TEMPORIALIST ARCHIVE</a>
     </div>
     <button id="nav-toggle" aria-label="Toggle navigation">
-  &#9776; <!-- hamburger icon -->
-</button>
-<div class="nav-left" id="nav-menu">
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
-</div>
-<div class="nav-title">
-  <a href="index.html">THE TEMPORIALIST ARCHIVE</a>
-</div>
+      &#9776;
+    </button>
+    <div class="nav-left" id="nav-menu">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="become-an-archivist.html">BECOME AN ARCHIVIST</a>
+    </div>
+    <div class="nav-title">
+      <a href="index.html">THE TEMPORIALIST ARCHIVE</a>
+    </div>
   </nav>
 </header>
   <main class="homepage-layout">
@@ -110,6 +167,4 @@ fetch('/data/archives.json')
   })
   .catch(err => console.error('Failed to load archive data:', err));
 </script>
-
-
 </html>
