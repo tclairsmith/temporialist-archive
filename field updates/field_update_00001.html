@@ -3,48 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Field Update: [Title Here]</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <title>Field Update 00001</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="Brief description of Archive Item 0014.">
+  <meta name="date" content="2025-07-07" />
 </head>
 <body>
+ <div id="nav-placeholder"></div>
 
-  <header>
-    <div id="nav-placeholder"></div>
-  </header>
-
-  <main class="archive-page">
-    <h1>FIELD UPDATE: [Title Here]</h1>
-    <p class="archive-date">[Date Here]</p>
-    <div class="archive-description">
-      <p>[Your full update text goes here. Use basic HTML paragraphs.]</p>
-    </div>
+  <main>
+    <article class="archive-page">
+      <h1>Field Update 00001</h1>
+      <p class="archive-date">2025-07-07</p>
+      <h2>Placeholder Update</h2>
+</div>
+     
+      </div>
+      <p class="archive-description">
+       Placeholder description of the field update. These will be very short and hopefully may be delivered via a simple SMS update. 
+      </p>
+    </article>
   </main>
-
   <script>
-    fetch('/nav.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('nav-placeholder').innerHTML = html;
+  fetch('/nav.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
 
-        const navToggle = document.getElementById('nav-toggle');
-        const navMenu = document.getElementById('nav-menu');
+      // Re-bind nav interactivity after injection
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
 
-        if (navToggle && navMenu) {
-          navToggle.addEventListener('click', () => {
-            const isActive = navMenu.classList.toggle('active');
-            navToggle.innerHTML = isActive ? '&times;' : '&#9776;';
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+          const isActive = navMenu.classList.toggle('active');
+          navToggle.innerHTML = isActive ? '&times;' : '&#9776;';
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            navToggle.innerHTML = '&#9776;';
           });
-
-          navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-              navMenu.classList.remove('active');
-              navToggle.innerHTML = '&#9776;';
-            });
-          });
-        }
-      })
-      .catch(error => console.error('Failed to load nav:', error));
-  </script>
-
+        });
+      }
+    })
+    .catch(error => console.error('Failed to load nav:', error));
+</script>
 </body>
 </html>
