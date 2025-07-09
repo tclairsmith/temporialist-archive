@@ -37,25 +37,83 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
-nav {
+/* Make sure nav is flex container */
+nav.main-nav {
   display: flex;
   align-items: center;
-  height: 60px;
+  justify-content: space-between;
   position: relative;
+  height: 60px; /* matches your existing nav height */
+  padding: 0 2rem; /* same horizontal padding as header */
 }
 
-.nav-left {
+/* Left and right nav groups */
+.nav-left,
+.nav-right {
   display: flex;
   gap: 2rem;
 }
 
+/* Title absolutely centered */
 .nav-title {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
-  text-align: center;
+  font-weight: 600;
+  white-space: nowrap; /* prevent wrapping */
+  pointer-events: none; /* so clicks pass through if needed */
 }
+
+/* Optional: if you want links inside nav-title clickable, remove pointer-events */
+
+/* Hide the hamburger on desktop as you have */
+#nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 900px) {
+  #nav-toggle {
+    display: block;
+  }
+
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #nav-menu.active {
+    display: flex;
+  }
+
+  /* Stack nav title below menu on mobile */
+  .nav-title {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+    pointer-events: auto;
+    text-align: center;
+  }
+
+  nav.main-nav {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1rem 2rem;
+  }
+
+  .nav-left,
+  .nav-right {
+    gap: 1rem;
+  }
+}
+
 
 /* LAYOUT */
 main {
