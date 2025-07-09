@@ -141,8 +141,6 @@ nav.main-nav {
   }
 }
 
-
-
 /* LAYOUT */
 main {
   display: flex;
@@ -436,5 +434,12 @@ aside h2 {
   .archive-item {
     flex: 0 1 calc(50% - 1rem);
     max-width: calc(50% - 1rem);
+  }
+}
+/* === MOBILE: 1-up at 1099px and below === */
+@media (max-width: 1099px) {
+  .archive-item {
+    flex: 0 1 100%;
+    max-width: 100%;
   }
 }
