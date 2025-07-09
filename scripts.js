@@ -27,11 +27,9 @@ card.innerHTML = `
 `;
 
 const navToggle = document.getElementById('nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
+const navMenu = document.getElementById('nav-menu');
 
 navToggle.addEventListener('click', () => {
   const isActive = navMenu.classList.toggle('active');
-
-  // Toggle hamburger to X when menu is open, and back when closed
   navToggle.innerHTML = isActive ? '&times;' : '&#9776;';
 });

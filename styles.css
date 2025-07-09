@@ -71,71 +71,47 @@ nav.main-nav {
   gap: 2rem;
 }
 
-/* === Hamburger button === */
+/* --- Default styles (large screens) --- */
 #nav-toggle {
-  display: none; /* only shown at mobile sizes */
+  display: none; /* hide hamburger by default */
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
   user-select: none;
   color: black;
-  z-index: 1100;
+  order: -1; /* show on far left when flexed */
+  margin-right: 1rem;
+  z-index: 1200;
 }
 
-/* === Mobile nav menu overlay === */
-.nav-menu {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  right: 0;
-  background: white;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem 0;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 1050;
-}
-
-.nav-menu.active {
+.nav-left,
+.nav-right {
   display: flex;
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+  gap: 2rem;
 }
 
-.nav-menu a {
-  font-size: 1.2rem;
+.nav-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
   font-weight: 600;
-  color: black;
-  text-decoration: none;
-  user-select: none;
+  white-space: nowrap;
+  z-index: 1200;
 }
 
-.nav-menu a:hover {
-  text-decoration: underline;
-}
-
-/* === MOBILE + TABLET NAV at max-width 1099px === */
+/* --- Responsive for small screens --- */
 @media (max-width: 1099px) {
-  /* Show hamburger */
   #nav-toggle {
     display: block;
   }
 
-  /* Hide nav links */
   .nav-left,
   .nav-right {
     display: none;
   }
 
-  /* Stack site title vertically */
   .nav-title {
     position: static;
     transform: none;
@@ -148,8 +124,6 @@ nav.main-nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    white-space: normal;
     font-size: 1.8rem;
     line-height: 1.2;
   }
@@ -158,7 +132,26 @@ nav.main-nav {
     display: block;
     width: 100%;
   }
+
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 0;
+    z-index: 1100;
+  }
+
+  #nav-menu.active {
+    display: flex;
+  }
 }
+
 
 /* LAYOUT */
 main {
