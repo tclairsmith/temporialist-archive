@@ -27,14 +27,11 @@ card.innerHTML = `
 `;
 
 const navToggle = document.getElementById('nav-toggle');
-const navMenu = document.getElementById('nav-menu');
+const navMenu = document.querySelector('.nav-menu');
 
 navToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
+  const isActive = navMenu.classList.toggle('active');
 
-  if (navMenu.classList.contains('active')) {
-    navToggle.innerHTML = '&times;'; // × close icon
-  } else {
-    navToggle.innerHTML = '&#9776;'; // ☰ hamburger icon
-  }
+  // Toggle hamburger to X when menu is open, and back when closed
+  navToggle.innerHTML = isActive ? '&times;' : '&#9776;';
 });
