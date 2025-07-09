@@ -440,19 +440,8 @@ aside h2 {
    main {
     flex-direction: column;  /* stack children vertically */
   }
-
-  .archive-section {
-    order: 0;  /* first */
-    width: 100%;
-  }
-
-  aside.field-updates {
-    order: 1;  /* second, below archive */
-    width: 100%;
-    margin-top: 2rem;  /* optional spacing */
-  }
 .archive-scroll-wrapper {
-  max-height: 400px;       /* adjust to roughly fit 9 cards */
+  max-height: 600px;       /* adjust to roughly fit 9 cards */
   overflow-y: auto;
   padding-right: 0.5rem;   /* scrollbar space */
   border: 1px solid #ccc;  /* optional: same style as sidebar */
@@ -470,6 +459,16 @@ aside h2 {
   background-color: #333;
   border-radius: 3px;
 }
+  .archive-section {
+    order: 0;  /* first */
+    width: 100%;
+  }
+
+  aside.field-updates {
+    order: 1;  /* second, below archive */
+    width: 100%;
+    margin-top: 2rem;  /* optional spacing */
+  }
   #nav-toggle {
     margin-bottom: 0.75rem;  /* space below hamburger */
     order: 0;                /* make sure it comes first */
