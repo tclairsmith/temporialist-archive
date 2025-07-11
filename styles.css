@@ -1,8 +1,7 @@
 /* GLOBAL RESET + BASE */
 * {
   box-sizing: border-box;
-}
-
+}/*
 @font-face {
   font-family: 'temporialist_standardregular';
   src: url('/fonts/temporialiststandard-regular-webfont.woff2') format('woff2');
@@ -10,6 +9,7 @@
   font-style: normal;
   font-display: swap;
 }
+  */
 
 body {
   font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', serif;
@@ -28,7 +28,7 @@ body {
 }
 
 nav.main-nav {
-  font-family: 'temporialist_standardregular', serif;
+  font-family: 'Palatino Linotype', Palatino, serif;
 }
 a {
   color: black;
@@ -275,6 +275,7 @@ aside h2 {
   border: 1px solid #ccc;
   padding: 0.5rem;
   background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .archive-item p {
@@ -325,7 +326,6 @@ aside h2 {
   margin-bottom: 0.5rem;
   padding: 12px 0; /* Top and bottom padding */
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .archive-image-wrapper img {
