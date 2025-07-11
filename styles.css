@@ -18,7 +18,7 @@ body {
   color: #333;
   /*background: #FEFEF3;*/
   cursor: default;
-  background-image: url('/images/bg.png');
+  background-image: url('../images/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
