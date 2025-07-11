@@ -275,7 +275,11 @@ aside h2 {
   border: 1px solid #ccc;
   padding: 0.5rem;
   background: #fff;
-}
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  flex: 0 1 calc(25% - 1rem);
+  box-sizing: border-box;
+  max-width: calc(33.333% - 1rem);
+  transition: box-shadow 0.2s ease-in-out;
 
 .archive-item p {
   margin: 0.2rem 0;
