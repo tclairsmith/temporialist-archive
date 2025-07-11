@@ -16,15 +16,14 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background: #FEFEF3;
+  /*background: #FEFEF3;*/
   cursor: default;
   background-image: url('/images/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-}
+ /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));*/
 }
 
 nav.main-nav {
